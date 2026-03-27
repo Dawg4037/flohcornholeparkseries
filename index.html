@@ -126,6 +126,40 @@
     .event-info p { color: var(--text-mid); font-size: 0.95rem; margin-top: 4px; }
     .event-info .tbd { display: inline-block; background: var(--sky); color: white; font-size: 0.75rem; font-weight: 700; padding: 2px 10px; border-radius: 50px; margin-top: 6px; letter-spacing: 1px; }
 
+    /* Tournament Format Section */
+    .format-section { background: var(--cream); padding: 60px 20px; }
+    .format-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; margin-top: 40px; max-width: 900px; margin-left: auto; margin-right: auto; }
+    .format-card {
+      background: white; border: 3px solid var(--brown); border-radius: 16px;
+      padding: 28px 24px; box-shadow: 5px 5px 0 var(--gold);
+    }
+    .format-card h3 {
+      font-family: 'Fredoka One', cursive; font-size: 1.4rem; color: var(--brown);
+      margin-bottom: 16px; display: flex; align-items: center; gap: 10px;
+    }
+    .format-card ul { list-style: none; }
+    .format-card li {
+      color: var(--text-mid); font-size: 1rem; line-height: 1.8;
+      padding-left: 24px; position: relative;
+    }
+    .format-card li::before {
+      content: '🎯'; position: absolute; left: 0; top: 2px; font-size: 0.9rem;
+    }
+    .format-card.cookout li::before { content: '🍖'; }
+    .payout-note {
+      margin-top: 16px; padding: 12px 16px; background: var(--cream); border-radius: 10px;
+      font-size: 0.9rem; color: var(--text-dark);
+    }
+    .payout-note strong { color: var(--brown); }
+    .register-btn {
+      display: block; margin-top: 16px; background: var(--gold); color: var(--brown);
+      font-family: 'Fredoka One', cursive; font-size: 1.1rem; padding: 12px 24px;
+      border-radius: 50px; text-decoration: none; text-align: center;
+      border: 3px solid var(--brown); box-shadow: 3px 3px 0 var(--brown);
+      transition: all 0.15s ease;
+    }
+    .register-btn:hover { transform: translate(-2px,-2px); box-shadow: 5px 5px 0 var(--brown); }
+
     .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 24px; margin-top: 40px; }
     .step { text-align: center; padding: 20px; }
     .step-num {
@@ -230,6 +264,42 @@
       <p class="recap-text reveal">
         Event #1 at Eagle Lake Park set the bar high. Players spread across the lush green field, cornhole boards lined up end to end, blue skies overhead — exactly what Florida park cornhole should look like. The community showed up, the food was flowing, and the competition was real. We can't wait to do it again.
       </p>
+    </div>
+  </section>
+
+  <div class="rope-divider"></div>
+
+  <!-- Tournament Format & Cookout Section -->
+  <section class="format-section">
+    <div class="section">
+      <h2 class="section-title reveal">Tournament Format</h2>
+      <div class="format-grid reveal">
+        <div class="format-card">
+          <h3>🏆 Competition</h3>
+          <ul>
+            <li><strong>$10 per player · 100% Payout</strong></li>
+            <li>6 games guaranteed</li>
+            <li>4 round robin games</li>
+            <li>Double elimination bracket</li>
+            <li>Upper &amp; Lower divisions (split by total points)</li>
+          </ul>
+          <div class="payout-note">
+            <strong>Payouts:</strong><br>
+            Upper Division — Top 3 paid<br>
+            Lower Division — Top 2 paid
+          </div>
+          <a href="https://scoreholio.com" target="_blank" class="register-btn">Register on Scoreholio</a>
+        </div>
+        <div class="format-card cookout">
+          <h3>🍖 Cookout Details</h3>
+          <ul>
+            <li>Bring your own meat to grill</li>
+            <li>Bring a shareable side, dip, chips, or dessert</li>
+            <li>BYOB — You're responsible for your own beverages</li>
+            <li>All alcoholic beverages must be covered or in a cup</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </section>
 
